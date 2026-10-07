@@ -1,0 +1,28 @@
+---
+description: Sloud Engineering Standards — core rules for every Sloud repo
+alwaysApply: true
+---
+
+# Sloud core
+
+You are working in the Sloud fleet. Org standards live in the `sloud-engineering-standards` repo (`standards/`). When that tree is available (sibling checkout or vendored copy), follow it. Product `AGENTS.md` adds product-only detail.
+
+## Priority
+
+correctness → security → consistency → speed
+
+## Must
+
+- Human owns every merge; you never approve alone
+- Read the relevant `standards/*.md` before building
+- UI: Bloom — no invented spacing, type metrics, control heights, or z-index (`standards/08-bloom-design-system.md` → https://github.com/vindhq/sloud-bloom)
+- Match existing patterns in the repo you’re in
+- No secrets in source or prompts
+- No new dependencies without explicit approval
+- No `any` / suppressed types / disabled lint without approval
+
+## Must not
+
+- Commit, push, or rewrite git history unless the human explicitly asks
+- Fork Bloom tokens or invent a parallel design scale
+- Be the sole PR reviewer
